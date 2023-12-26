@@ -117,8 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const KeywordButton = document.getElementById('KeywordButton');
 
     KeywordButton.addEventListener('click', function(e) {
-        e.preventDefault(); // 防止链接默认行为
-
         // 定义关键词列表
         const keywords = ['Love', 'Happiness', 'Joy', 'Friendship', 'Peace'];
 
@@ -132,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
         this.disabled = true;
     });
 });
+
 
 /*==================== Track ====================*/
 <script>
