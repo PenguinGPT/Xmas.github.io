@@ -127,5 +127,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 更新按钮文本
         this.textContent = randomKeyword;
+        
+        // 禁用按钮，防止再次点击
+        this.disabled = true;
+        // 或者移除事件监听器，也可以防止进一步点击
+        // this.removeEventListener('click', arguments.callee);
     });
 });
