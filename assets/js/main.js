@@ -135,3 +135,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+/*==================== Track ====================*/
+<script>
+function trackAccessoryClick(event) {
+    event.preventDefault(); // 阻止链接的默认行为
+    var url = this.getAttribute('href');
+    var label = this.closest('.accessory__content').querySelector('.accessory__title').innerText; // 获取游戏名称
+
+    gtag('event', 'click', {
+        'event_category': 'Accessory Link Clicks',
+        'event_label': label,
+        'transport_type': 'beacon',
+        'event_callback': function() {
+            document.location = url;
+        }
+    });
+}
+
+var accessoryLinks = document.querySelectorAll('.accessory__button');
+accessoryLinks.forEach(function(link) {
+    link.addEventListener('click', trackAccessoryClick);
+});
+</script>
