@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const KeywordButton = document.getElementById('KeywordButton');
     let isClicked = false; // 添加一个标志来检查是否已点击
 
-    pickGiftButton.addEventListener('click', function(e) {
+    KeywordButton.addEventListener('click', function(e) {
         e.preventDefault(); // 防止链接默认行为
 
         if (!isClicked) {
