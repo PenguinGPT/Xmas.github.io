@@ -158,3 +158,28 @@ accessoryLinks.forEach(function(link) {
     link.addEventListener('click', trackAccessoryClick);
 });
 </script>
+
+/*==================== Track 2 ====================*/
+
+<script>
+function trackFacebookLinkClick(event) {
+    // 阻止链接的默认行为
+    event.preventDefault(); 
+
+    var url = this.getAttribute('href');
+    var label = 'Facebook Group Link'; // 自定义标签
+
+    gtag('event', 'click', {
+        'event_category': 'External Link Clicks',
+        'event_label': label,
+        'transport_type': 'beacon',
+        'event_callback': function() {
+            document.location = url;
+        }
+    });
+}
+
+// 选择特定的链接并添加事件监听器
+var facebookLink = document.querySelector('.nav__logo[href="https://www.facebook.com/groups/vitastudio"]');
+facebookLink.addEventListener('click', trackFacebookLinkClick);
+</script>
