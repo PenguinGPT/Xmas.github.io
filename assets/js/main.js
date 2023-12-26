@@ -114,7 +114,6 @@ sr.reveal(`.share__data, .send__img`, {
 
 
 /*==================== Track ====================*/
-<script>
 function trackAccessoryClick(event) {
     event.preventDefault(); // 阻止链接的默认行为
     var url = this.getAttribute('href');
@@ -134,11 +133,9 @@ var accessoryLinks = document.querySelectorAll('.accessory__button');
 accessoryLinks.forEach(function(link) {
     link.addEventListener('click', trackAccessoryClick);
 });
-</script>
 
 /*==================== Track 2 ====================*/
 
-<script>
 function trackFacebookLinkClick(event) {
     // 阻止链接的默认行为
     event.preventDefault(); 
@@ -159,7 +156,6 @@ function trackFacebookLinkClick(event) {
 // 选择特定的链接并添加事件监听器
 var facebookLink = document.querySelector('.nav__logo[href="https://www.facebook.com/groups/vitastudio"]');
 facebookLink.addEventListener('click', trackFacebookLinkClick);
-</script>
 
 
 /*==================== PICK A GIFT BUTTON INTERACTION ====================*/
