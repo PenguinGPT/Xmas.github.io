@@ -125,9 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 更新按钮文本
         this.textContent = randomKeyword;
-
-        // 禁用按钮，防止再次点击
-        this.disabled = true;
     });
 });
 
