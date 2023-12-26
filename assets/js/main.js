@@ -167,6 +167,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const KeywordButton = document.getElementById('KeywordButton');
 
     KeywordButton.addEventListener('click', function(e) {
+        e.preventDefault(); // 防止链接默认行为
+
         // 定义关键词列表
         const keywords = ['Love', 'Happiness', 'Joy', 'Friendship', 'Peace'];
 
@@ -175,5 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 更新按钮文本
         this.textContent = randomKeyword;
+
+        // 禁用按钮，防止再次点击
+        this.disabled = true;
     });
 });
