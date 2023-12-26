@@ -115,22 +115,23 @@ sr.reveal(`.share__data, .send__img`, {
 /*==================== PICK A GIFT BUTTON INTERACTION ====================*/
 document.addEventListener('DOMContentLoaded', () => {
     const KeywordButton = document.getElementById('KeywordButton');
+    let isClicked = false; // 添加一个标志来检查是否已点击
 
-    KeywordButton.addEventListener('click', function(e) {
+    pickGiftButton.addEventListener('click', function(e) {
         e.preventDefault(); // 防止链接默认行为
 
-        // 定义关键词列表
-        const keywords = ['Love', 'Happiness', 'Joy', 'Friendship', 'Peace'];
+        if (!isClicked) {
+            // 定义关键词列表
+            const keywords = ['Love', 'Happiness', 'Joy', 'Friendship', 'Peace'];
 
-        // 随机选择一个关键词
-        const randomKeyword = keywords[Math.floor(Math.random() * keywords.length)];
+            // 随机选择一个关键词
+            const randomKeyword = keywords[Math.floor(Math.random() * keywords.length)];
 
-        // 更新按钮文本
-        this.textContent = randomKeyword;
-        
-        // 禁用按钮，防止再次点击
-        this.disabled = true;
-        // 或者移除事件监听器，也可以防止进一步点击
-        // this.removeEventListener('click', arguments.callee);
+            // 更新按钮文本
+            this.textContent = randomKeyword;
+
+            isClicked = true; // 设置标志为true，表示按钮已被点击
+        }
     });
 });
+
