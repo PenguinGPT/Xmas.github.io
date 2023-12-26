@@ -294,8 +294,8 @@ img{
     }
 }
 
-/*========== SHARE ==========*/
-.share{
+/*========== KEYWORD ==========*/
+.keyword{
     &__data{
         text-align: center;
     }
@@ -309,33 +309,8 @@ img{
 }
 
 
-/*========== DECORATION ==========*/
-.decoration{
-    &__container{
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-    &__data{
-        text-align: center;
-        padding: 1rem 1rem 2rem;
-        background-color: var(--container-color);
-        box-shadow: 0 2px 6px rgba(65, 11, 16, .15);
-        border-radius: 1rem;
-        
-        &:hover{
-            box-shadow: 0 3px 12px rgba(65, 11, 16, .15);
-        }
-    }
-    &__img{
-        width: 180px;
-    }
-    &__title{
-        font-size: var(--h3-font-size);
-        margin-bottom: var(--mb-1);
-    }
-}
-
-/*========== ACCESSORIES ==========*/
-.accessory{
+/*========== GAMES ==========*/
+.games{
     &__container{
         grid-template-columns: repeat(2, 1fr);
         padding-bottom: 2rem;
@@ -383,8 +358,8 @@ img{
     }
 }
 
-/*========== SEND GIFT ==========*/
-.send{
+/*========== CLAIM GIFT ==========*/
+.claim{
     background-color: var(--first-color-send);
 
     &__title, &__description{
@@ -452,9 +427,9 @@ img{
     }
     &__copy{
         text-align: center;
-        font-size: var(--small-font-size);
+        font-size: var(--medium-font-size);
         color: var(--text-color-light);
-        margin-top: 4rem;
+        margin-top: 2rem;
     }
 }
 
