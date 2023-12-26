@@ -111,3 +111,21 @@ sr.reveal(`.share__img, .send__content`, {
 sr.reveal(`.share__data, .send__img`, {
     origin: 'right'
 })
+
+/*==================== PICK A GIFT BUTTON INTERACTION ====================*/
+document.addEventListener('DOMContentLoaded', () => {
+    const KeywordButton = document.getElementById('KeywordButton');
+
+    KeywordButton.addEventListener('click', function(e) {
+        e.preventDefault(); // 防止链接默认行为
+
+        // 定义关键词列表
+        const keywords = ['Love', 'Happiness', 'Joy', 'Friendship', 'Peace'];
+
+        // 随机选择一个关键词
+        const randomKeyword = keywords[Math.floor(Math.random() * keywords.length)];
+
+        // 更新按钮文本
+        this.textContent = randomKeyword;
+    });
+});
