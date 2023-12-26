@@ -475,9 +475,9 @@ img{
 
 .footer__copy{
   text-align: center;
-  font-size: var(--small-font-size);
+  font-size: var(--medium-font-size);
   color: var(--text-color-light);
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 /*========== MEDIA QUERIES ==========*/
