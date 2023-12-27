@@ -615,3 +615,26 @@ img{
     }
 }
 
+
+#scrollDownButton {
+  padding: 12px 24px;
+  font-size: 1.5rem; /* 调整到适合的大小 */
+}
+
+/* 修改 "Keyword" 按钮的字体大小 */
+#KeywordButton {
+  padding: 12px 24px;
+  font-size: 1.5rem; /* 调整到适合的大小 */
+}
+
+/* 修改 "Download" 按钮的字体大小 */
+#downloadButton {
+  padding: 12px 24px;
+  font-size: 1.5rem; /* 调整到适合的大小 */
+}
+
+/* 修改 "Share" 按钮的字体大小 */
+#shareButton {
+  padding: 12px 24px;
+  font-size: 1.5rem; /* 调整到适合的大小 */
+}
