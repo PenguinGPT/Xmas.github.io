@@ -338,6 +338,9 @@ img{
 
 .accessory__img{
   width: 110px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   justify-self: center;
   margin-bottom: .25rem;
 }
