@@ -171,6 +171,30 @@ facebookLink.addEventListener('click', trackFacebookLinkClick);
         });
     });
 
+/*==================== SHARE LINK ====================*/
+
+    document.getElementById('downloadButton').addEventListener('click', function() {
+        // ... 下载按钮的事件处理逻辑 ...
+    });
+
+    document.getElementById('shareButton').addEventListener('click', function() {
+        // 需要复制的链接
+        var linkToCopy = "penguingpt.github.io/Xmas.github.io/";
+
+        // 复制链接到剪贴板
+        navigator.clipboard.writeText(linkToCopy).then(function() {
+            // 显示“Link Copied”提示
+            alert("Link Copied, Share With Others!");
+
+            // 向谷歌分析发送事件
+            gtag('event', 'share', {
+                'event_category': 'Share Button Click',
+                'event_label': 'Link Shared'
+            });
+        }, function(err) {
+            console.error('Could not copy text: ', err);
+        });
+    });
 
 /*==================== PICK A KEYWORD BUTTON INTERACTION ====================*/
 
