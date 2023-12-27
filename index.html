@@ -23,6 +23,10 @@
     </script>
 </head>
     <body>
+         <audio autoplay loop muted>
+            <source src="assets/img/audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
         <!--========== SCROLL TOP ==========-->
         <a href="#" class="scrolltop" id="scroll-top">
             <i class='bx bx-up-arrow-alt scrolltop__icon'></i>
@@ -87,7 +91,8 @@
 
                 <div class="accessory__container bd-grid">
                     <div class="accessory__content">
-                        <img src="assets/img/VitaSolitaire.png" alt="" class="accessory__img">
+                        <a href="https://play.google.com/store/apps/details?id=com.vitastudio.solitaire" onclick="sendAnalyticsEvent('Vita Solitaire Clicked')"></a>
+                            <img src="assets/img/VitaSolitaire.png" alt="" class="accessory__img">
                         <h3 class="accessory__title">Vita Solitaire</h3>
                         <span class="accessory__category">Large Cards</span>
                         <span class="accessory__preci"><del>$1.99</del> FREE</span>
@@ -95,7 +100,8 @@
                     </div>
 
                     <div class="accessory__content">
-                        <img src="assets/img/VitaJigsaw.png" alt="" class="accessory__img">
+                        <a href="https://play.google.com/store/apps/details?id=com.vitastudio.senior.jigsaw" onclick="sendAnalyticsEvent('Vita Jigsaw Clicked')"></a>                        
+                            <img src="assets/img/VitaJigsaw.png" alt="" class="accessory__img">
                         <h3 class="accessory__title">Vita Jigsaw</h3>
                         <span class="accessory__category">Large Pieces</span>
                         <span class="accessory__preci"><del>$2.99</del> FREE</span>
@@ -157,6 +163,8 @@
                     <a href="assets/img/accessory2.png" id="downloadLink" download style="display: none;"></a>
             </section>
         </main>
+
+        
 
         <!--========== FOOTER ==========-->
         <footer class="footer section">
