@@ -178,27 +178,37 @@ facebookLink.addEventListener('click', trackFacebookLinkClick);
     });
 
 document.getElementById('shareButton').addEventListener('click', function() {
-    var textArea = document.createElement("textarea");
-    textArea.value = "https://penguingpt.github.io/Xmas.github.io/";  // 替换为您要分享的链接
-    document.body.appendChild(textArea);
-    textArea.select();
-
-    try {
-        var successful = document.execCommand('copy');
-        var msg = successful ? 'successful' : 'unsuccessful';
-        console.log('Copying text command was ' + msg);
-        alert("Link Copied, Share With Others!");
-    } catch (err) {
-        console.log('Oops, unable to copy', err);
+    if (navigator.clipboard && window.isSecureContext) {
+        // 使用现代的Clipboard API
+        navigator.clipboard.writeText("https://example.com/shared-link")
+            .then(function() {
+                alert("Link Copied");
+                // 向谷歌分析发送事件
+                gtag('event', 'share', {
+                    'event_category': 'Share Button Click',
+                    'event_label': 'Link Shared'
+                });
+            })
+            .catch(function(err) {
+                console.error('Could not copy text: ', err);
+            });
+    } else {
+        // 备用方案：显示一个文本输入框供用户手动复制
+        var textArea = document.createElement("textarea");
+        textArea.value = "https://example.com/shared-link";
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        try {
+            var successful = document.execCommand('copy');
+            var msg = successful ? 'successful' : 'unsuccessful';
+            console.log('Fallback: Copying text command was ' + msg);
+            alert("Link Copied");
+        } catch (err) {
+            console.error('Fallback: Oops, unable to copy', err);
+        }
+        document.body.removeChild(textArea);
     }
-
-    document.body.removeChild(textArea);
-
-    // 向谷歌分析发送事件
-    gtag('event', 'share', {
-        'event_category': 'Share Button Click',
-        'event_label': 'Link Shared'
-    });
 });
 
 /*==================== PICK A KEYWORD BUTTON INTERACTION ====================*/
