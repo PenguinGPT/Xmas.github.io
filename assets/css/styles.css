@@ -571,17 +571,6 @@ img{
   }
 }
 
-/* 为下载按钮添加样式 */
-.download-btn {
-  /* 您可以在这里添加任何特定于下载按钮的样式 */
-}
-
-/* 为分享按钮添加样式 */
-.share-btn {
-  margin-top: 20px; /* 在按钮之间添加一些间距 */
-  /* 您可以在这里添加任何特定于分享按钮的样式 */
-}
-
 @media screen and (min-width: 968px){
   .bd-container{
     margin-left: auto;
@@ -600,3 +589,29 @@ img{
     column-gap: 5rem;
   }
 }
+
+/*========== BUTTON CONTAINER ==========*/
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* 控制按钮之间的间距 */
+}
+
+/* 覆盖原有的按钮样式以确保它们适用于新布局 */
+#downloadButton, #shareButton {
+    width: auto; /* 或者设置为特定宽度，如 200px */
+    margin: 0; /* 移除任何默认外边距 */
+}
+
+/* 可选：如果您希望按钮在更大屏幕上也居中 */
+@media screen and (min-width: 576px){
+    .send__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
