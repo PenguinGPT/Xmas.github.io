@@ -158,7 +158,21 @@ var facebookLink = document.querySelector('.nav__logo[href="https://www.facebook
 facebookLink.addEventListener('click', trackFacebookLinkClick);
 
 
-/*==================== PICK A GIFT BUTTON INTERACTION ====================*/
+/*==================== Email Track ====================*/
+
+document.getElementById('emailForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // 阻止表单默认提交行为
+
+    var email = document.getElementById('emailInput').value;
+    gtag('event', 'submit_email', {
+        'event_category': 'Email Submission',
+        'event_label': email
+    });
+});
+
+
+/*==================== PICK A Keyword BUTTON INTERACTION ====================*/
+
 document.addEventListener('DOMContentLoaded', () => {
     const KeywordButton = document.getElementById('KeywordButton');
 
@@ -166,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault(); // 防止链接默认行为
 
         // 定义关键词列表
-        const keywords = ['Love', 'Happiness', 'Joy', 'Friendship', 'Peace'];
+        const keywords = ['Love', 'Happiness', 'Joy', 'Fun', 'Peace'];
 
         // 随机选择一个关键词
         const randomKeyword = keywords[Math.floor(Math.random() * keywords.length)];
