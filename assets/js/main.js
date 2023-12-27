@@ -113,7 +113,7 @@ sr.reveal(`.share__data, .send__img`, {
 })
 
 
-/*==================== Track ====================*/
+/*==================== App Link Click ====================*/
 function trackAccessoryClick(event) {
     event.preventDefault(); // 阻止链接的默认行为
     var url = this.getAttribute('href');
@@ -134,7 +134,7 @@ accessoryLinks.forEach(function(link) {
     link.addEventListener('click', trackAccessoryClick);
 });
 
-/*==================== Track 2 ====================*/
+/*==================== Group Link Click ====================*/
 
 function trackFacebookLinkClick(event) {
     // 阻止链接的默认行为
@@ -158,20 +158,21 @@ var facebookLink = document.querySelector('.nav__logo[href="https://www.facebook
 facebookLink.addEventListener('click', trackFacebookLinkClick);
 
 
-/*==================== Email Track ====================*/
+/*==================== Download Track ====================*/
 
-document.getElementById('emailForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // 阻止表单默认提交行为
+    document.getElementById('downloadButton').addEventListener('click', function() {
+        // 触发下载
+        document.getElementById('downloadLink').click();
 
-    var email = document.getElementById('emailInput').value;
-    gtag('event', 'submit_email', {
-        'event_category': 'Email Submission',
-        'event_label': email
+        // 向谷歌分析发送事件
+        gtag('event', 'download', {
+            'event_category': 'Download Button Click',
+            'event_label': 'Holiday Gift Download'
+        });
     });
-});
 
 
-/*==================== PICK A Keyword BUTTON INTERACTION ====================*/
+/*==================== PICK A KEYWORD BUTTON INTERACTION ====================*/
 
 document.addEventListener('DOMContentLoaded', () => {
     const KeywordButton = document.getElementById('KeywordButton');
