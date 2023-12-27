@@ -211,6 +211,16 @@ document.getElementById('shareButton').addEventListener('click', function() {
     }
 });
 
+/*==================== ICONS CLICK TRACK ====================*/
+
+function sendAnalyticsEvent(eventName) {
+    gtag('event', eventName, {
+        'event_category': 'Image Click',
+        'event_label': eventName
+    });
+}
+
+
 /*==================== PICK A KEYWORD BUTTON INTERACTION ====================*/
 
 document.addEventListener('DOMContentLoaded', () => {
