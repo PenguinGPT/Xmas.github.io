@@ -18,11 +18,11 @@
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
 
-    --biggest-font-size: 2rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1.125rem;
-    --normal-font-size: .938rem;
-    --small-font-size: .813rem;
+    --biggest-font-size: 3rem;
+    --h2-font-size: 2.25rem;
+    --h3-font-size: 2.125rem;
+    --normal-font-size: 1.938rem;
+    --small-font-size: 1.813rem;
 
     @media screen and (min-width: 968px){
         --biggest-font-size: 3rem;
@@ -564,6 +564,31 @@ img{
     .share__container,
     .send__container{
         column-gap: 5rem;
+    }
+}
+
+/*========== BUTTON CONTAINER ==========*/
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* 控制按钮之间的间距 */
+}
+
+/* 覆盖原有的按钮样式以确保它们适用于新布局 */
+#downloadButton, #shareButton {
+    width: auto; /* 或者设置为特定宽度，如 200px */
+    margin: 0; /* 移除任何默认外边距 */
+}
+
+/* 可选：如果您希望按钮在更大屏幕上也居中 */
+@media screen and (min-width: 576px){
+    .send__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 
