@@ -17,11 +17,11 @@
 
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
-  --biggest-font-size: 2rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1.125rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
+  --biggest-font-size: 3rem;
+  --h2-font-size: 2.25rem;
+  --h3-font-size: 2.125rem;
+  --normal-font-size: 1.938rem;
+  --small-font-size: 1.813rem;
 
   /*========== Font weight ==========*/
   --font-semi-bold: 600;
@@ -317,32 +317,6 @@ img{
   justify-self: center;
 }
 
-/*========== DECORATION ==========*/
-.decoration__container{
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.decoration__data{
-  text-align: center;
-  padding: 1rem 1rem 2rem;
-  background-color: var(--container-color);
-  box-shadow: 0 2px 6px rgba(65,11,16,.15);
-  border-radius: 1rem;
-}
-
-.decoration__data:hover{
-  box-shadow: 0 3px 12px rgba(65,11,16,.15);
-}
-
-.decoration__img{
-  width: 180px;
-}
-
-.decoration__title{
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-1);
-}
-
 /*========== ACCESSORIES ==========*/
 .accessory__container{
   grid-template-columns: repeat(2,1fr);
@@ -597,10 +571,16 @@ img{
   }
 }
 
-#downloadButton {
-  margin-bottom: 20px; /* 为download按钮单独设置间距 */
+/* 为下载按钮添加样式 */
+.download-btn {
+  /* 您可以在这里添加任何特定于下载按钮的样式 */
 }
 
+/* 为分享按钮添加样式 */
+.share-btn {
+  margin-top: 20px; /* 在按钮之间添加一些间距 */
+  /* 您可以在这里添加任何特定于分享按钮的样式 */
+}
 
 @media screen and (min-width: 968px){
   .bd-container{
