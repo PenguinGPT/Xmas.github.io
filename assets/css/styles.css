@@ -17,11 +17,11 @@
 
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
-  --biggest-font-size: 2rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1.125rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
+  --biggest-font-size: 2.5rem;
+  --h2-font-size: 1.75rem;
+  --h3-font-size: 1.625rem;
+  --normal-font-size: 1.438rem;
+  --small-font-size: 1.313rem;
 
   /*========== Font weight ==========*/
   --font-semi-bold: 600;
@@ -617,24 +617,28 @@ img{
 
 
 #scrollDownButton {
+  border: none;
   padding: 12px 24px;
   font-size: 1.5rem; /* 调整到适合的大小 */
 }
 
 /* 修改 "Keyword" 按钮的字体大小 */
 #KeywordButton {
+  border: none;
   padding: 12px 24px;
   font-size: 1.5rem; /* 调整到适合的大小 */
 }
 
 /* 修改 "Download" 按钮的字体大小 */
 #downloadButton {
+  border: none;
   padding: 12px 24px;
   font-size: 1.5rem; /* 调整到适合的大小 */
 }
 
 /* 修改 "Share" 按钮的字体大小 */
 #shareButton {
+  border: none;
   padding: 12px 24px;
   font-size: 1.5rem; /* 调整到适合的大小 */
 }
