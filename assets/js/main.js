@@ -179,13 +179,20 @@ facebookLink.addEventListener('click', trackFacebookLinkClick);
 
 document.getElementById('shareButton').addEventListener('click', function() {
     var textArea = document.createElement("textarea");
-    textArea.value = "penguingpt.github.io/Xmas.github.io/"; // 您想要复制的链接
+    textArea.value = "https://penguingpt.github.io/Xmas.github.io/";  // 替换为您要分享的链接
     document.body.appendChild(textArea);
     textArea.select();
-    document.execCommand('Copy');
-    textArea.remove();
 
-    alert("Link Copied, Share With Others!");
+    try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Copying text command was ' + msg);
+        alert("Link Copied, Share With Others!");
+    } catch (err) {
+        console.log('Oops, unable to copy', err);
+    }
+
+    document.body.removeChild(textArea);
 
     // 向谷歌分析发送事件
     gtag('event', 'share', {
