@@ -529,6 +529,10 @@ img{
         &__img{
             width: 120px;
             margin-bottom: var(--mb-1);
+            display: block; // 使图片成为块级元素
+            margin-left: auto; // 左边距自动
+            margin-right: auto; // 右边距自动
+            
         }
         &__title, &__category{
             text-align: initial;
