@@ -166,7 +166,7 @@ facebookLink.addEventListener('click', trackFacebookLinkClick);
 
         // 向谷歌分析发送事件
         gtag('event', 'download', {
-            'event_category': 'Download Button Click',
+            'event_category': 'Download Button Clicks',
             'event_label': 'Holiday Gift Download'
         });
     });
@@ -180,13 +180,13 @@ facebookLink.addEventListener('click', trackFacebookLinkClick);
 document.getElementById('shareButton').addEventListener('click', function() {
     if (navigator.clipboard && window.isSecureContext) {
         // 使用现代的Clipboard API
-        navigator.clipboard.writeText("https://example.com/shared-link")
+        navigator.clipboard.writeText("https://penguingpt.github.io/Xmas.github.io/")
             .then(function() {
-                alert("Link Copied");
+                alert("Link Copied, Share With Others!");
                 // 向谷歌分析发送事件
                 gtag('event', 'share', {
-                    'event_category': 'Share Button Click',
-                    'event_label': 'Link Shared'
+                    'event_category': 'Share Button Clicks',
+                    'event_label': 'Link Copied'
                 });
             })
             .catch(function(err) {
@@ -215,7 +215,7 @@ document.getElementById('shareButton').addEventListener('click', function() {
 
 function sendAnalyticsEvent(eventName) {
     gtag('event', eventName, {
-        'event_category': 'Image Click',
+        'event_category': 'Icon Clicks',
         'event_label': eventName
     });
 }
