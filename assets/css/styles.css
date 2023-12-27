@@ -597,6 +597,11 @@ img{
   }
 }
 
+#downloadButton {
+  margin-bottom: 20px; /* 为download按钮单独设置间距 */
+}
+
+
 @media screen and (min-width: 968px){
   .bd-container{
     margin-left: auto;
