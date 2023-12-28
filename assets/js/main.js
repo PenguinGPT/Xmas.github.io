@@ -205,7 +205,7 @@ function sendAnalyticsEvent(eventName) {
 /*==================== DOWNLAOD A IMAGE ====================*/
 
 // 假设 assets/img 目录下有以下文件
-const files = ['Family.png'];
+const files = ['Family.png','FairyDeer.png','Island.png','Farm.png','Cabin.png','Sakura.png','Forest.png','Harvest.png','Fishing.png','Dog.png'];
 
 document.getElementById('downloadButton').addEventListener('click', function() {
     // 从数组中随机选择一个文件
