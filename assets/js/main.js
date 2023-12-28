@@ -205,7 +205,8 @@ function sendAnalyticsEvent(eventName) {
 /*==================== DOWNLAOD A IMAGE ====================*/
 
 // 假设 assets/img 目录下有以下文件
-const files = ['Family.png','FairyDeer.png','Island.png','Farm.png','Cabin.png','Sakura.png','Forest.png','Harvest.png','Fishing.png','Dog.png'];
+const files = ['Family.png','FairyDeer.png','Island.png','Farm.png',
+               'Cabin.png','Sakura.png','Forest.png','Harvest.png','Fishing.png','Dog.png'];
 
 document.getElementById('downloadButton').addEventListener('click', function() {
     // 从数组中随机选择一个文件
@@ -251,7 +252,8 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault(); // 防止链接默认行为
 
         // 定义关键词列表
-        const keywords = ['Relaxation', 'Fun', 'Joy', 'Vita', 'Resilience','Wisdom','Harmony','Mindfulness','Gratitude','Health','Serenity','Fulfillment','Creativity','Empowerment','Peace'，'Inspiration','Strength','Unity','Balance','Compassion'];
+        const keywords = ['Relaxation','Fun','Joy','Vita','Resilience','Wisdom',
+                          'Harmony','Mindfulness','Gratitude','Health','Serenity','Fulfillment','Creativity','Empowerment','Peace','Inspiration','Strength','Bless','Balance','Compassion'];
 
         // 随机选择一个关键词
         const randomKeyword = keywords[Math.floor(Math.random() * keywords.length)];
