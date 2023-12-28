@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault(); // 防止链接默认行为
 
         // 定义关键词列表
-        const keywords = ['Love', 'Happiness', 'Joy', 'Fun', 'Peace'];
+        const keywords = ['Relaxation', 'Fun', 'Joy', 'Vita', 'Resilience','Wisdom','Harmony','Mindfulness','Gratitude','Health','Serenity','Fulfillment','Creativity','Empowerment','Peace'，'Inspiration','Strength','Unity','Balance','Compassion'];
 
         // 随机选择一个关键词
         const randomKeyword = keywords[Math.floor(Math.random() * keywords.length)];
