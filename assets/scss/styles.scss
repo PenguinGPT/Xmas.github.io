@@ -22,15 +22,17 @@
     --h3-font-size: 1.175rem;
     --normal-font-size: .988rem;
     --small-font-size: .863rem;
+}
 
-
-    @media screen and (min-width: 968px){
+@media screen and (min-width: 968px){
+    :root{
         --biggest-font-size: 3rem;
         --h2-font-size: 1.75rem;
         --h3-font-size: 1.25rem;
         --normal-font-size: 1rem;
         --small-font-size: .875rem;
     }
+}
 
     /*========== Font weight ==========*/
     --font-semi-bold: 600;
