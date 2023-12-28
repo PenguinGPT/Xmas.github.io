@@ -120,7 +120,7 @@ function trackAccessoryClick(event) {
     var label = this.closest('.accessory__content').querySelector('.accessory__title').innerText; // 获取游戏名称
 
     gtag('event', 'click', {
-        'event_category': 'Accessory Link Clicks',
+        'event_category': 'Like Icon Clicks',
         'event_label': label,
         'transport_type': 'beacon',
         'event_callback': function() {
@@ -141,11 +141,10 @@ function trackFacebookLinkClick(event) {
     event.preventDefault(); 
 
     var url = this.getAttribute('href');
-    var label = 'Facebook Group Link'; // 自定义标签
 
     gtag('event', 'click', {
         'event_category': 'External Link Clicks',
-        'event_label': label,
+        'event_label': 'Facebook Group Link Clicked'
         'transport_type': 'beacon',
         'event_callback': function() {
             document.location = url;
@@ -167,7 +166,7 @@ facebookLink.addEventListener('click', trackFacebookLinkClick);
         // 向谷歌分析发送事件
         gtag('event', 'download', {
             'event_category': 'Download Button Clicks',
-            'event_label': 'Holiday Gift Download'
+            'event_label': 'Holiday Gift Downloaded'
         });
     });
 
@@ -186,7 +185,7 @@ document.getElementById('shareButton').addEventListener('click', function() {
                 // 向谷歌分析发送事件
                 gtag('event', 'share', {
                     'event_category': 'Share Button Clicks',
-                    'event_label': 'Link Copied'
+                    'event_label': 'Share Link Copied'
                 });
             })
             .catch(function(err) {
@@ -215,7 +214,7 @@ document.getElementById('shareButton').addEventListener('click', function() {
 
 function sendAnalyticsEvent(eventName) {
     gtag('event', eventName, {
-        'event_category': 'Icon Clicks',
+        'event_category': 'App Icon Clicks',
         'event_label': eventName
     });
 }
