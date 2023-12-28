@@ -171,11 +171,6 @@ facebookLink.addEventListener('click', trackFacebookLinkClick);
     });
 
 /*==================== SHARE LINK ====================*/
-
-    document.getElementById('downloadButton').addEventListener('click', function() {
-        // ... 下载按钮的事件处理逻辑 ...
-    });
-
 document.getElementById('shareButton').addEventListener('click', function() {
     if (navigator.clipboard && window.isSecureContext) {
         // 使用现代的Clipboard API
@@ -194,7 +189,7 @@ document.getElementById('shareButton').addEventListener('click', function() {
     } else {
         // 备用方案：显示一个文本输入框供用户手动复制
         var textArea = document.createElement("textarea");
-        textArea.value = "https://example.com/shared-link";
+        textArea.value = "https://penguingpt.github.io/Xmas.github.io/";
         document.body.appendChild(textArea);
         textArea.focus();
         textArea.select();
