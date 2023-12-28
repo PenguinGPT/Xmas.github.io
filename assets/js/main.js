@@ -232,6 +232,15 @@ document.getElementById('downloadButton').addEventListener('click', function() {
         });
     });
 
+/*==================== AUDIO PLAY ====================*/
+
+document.getElementById('scrollDownButton').addEventListener('click', function() {
+    var audioPlayer = document.getElementById('audioPlayer');
+    audioPlayer.play(); // 播放音频
+
+});
+
+
 
 /*==================== PICK A KEYWORD BUTTON INTERACTION ====================*/
 
