@@ -144,7 +144,7 @@ function trackFacebookLinkClick(event) {
 
     gtag('event', 'click', {
         'event_category': 'External Link Clicks',
-        'event_label': 'Facebook Group Link Clicked'
+        'event_label': 'Facebook Group Link Clicked',
         'transport_type': 'beacon',
         'event_callback': function() {
             document.location = url;
@@ -159,7 +159,7 @@ facebookLink.addEventListener('click', trackFacebookLinkClick);
 
 /*==================== Download Track ====================*/
 
-    document.getElementById('downloadButton').addEventListener('click', function() {
+document.getElementById('downloadButton').addEventListener('click', function() {
         // 触发下载
         document.getElementById('downloadLink').click();
 
