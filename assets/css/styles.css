@@ -618,7 +618,7 @@ img{
     }
 }
 
-
+/* 修改 "Scroll" 按钮的字体大小 */
 #scrollDownButton {
   border: none;
   padding: 12px 24px;
@@ -630,6 +630,7 @@ img{
   border: none;
   padding: 12px 24px;
   font-size: 1.5rem; /* 调整到适合的大小 */
+  text-align: center
 }
 
 /* 修改 "Download" 按钮的字体大小 */
