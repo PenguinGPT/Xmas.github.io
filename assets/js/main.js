@@ -157,19 +157,6 @@ var facebookLink = document.querySelector('.nav__logo[href="https://www.facebook
 facebookLink.addEventListener('click', trackFacebookLinkClick);
 
 
-/*==================== Download Track ====================*/
-
-document.getElementById('downloadButton').addEventListener('click', function() {
-        // 触发下载
-        document.getElementById('downloadLink').click();
-
-        // 向谷歌分析发送事件
-        gtag('event', 'download', {
-            'event_category': 'Download Button Clicks',
-            'event_label': 'Holiday Gift Downloaded'
-        });
-    });
-
 /*==================== SHARE LINK ====================*/
 document.getElementById('shareButton').addEventListener('click', function() {
     if (navigator.clipboard && window.isSecureContext) {
@@ -213,6 +200,37 @@ function sendAnalyticsEvent(eventName) {
         'event_label': eventName
     });
 }
+
+
+/*==================== DOWNLAOD A IMAGE ====================*/
+
+// 假设 assets/img 目录下有以下文件
+const files = ['Family.png'];
+
+document.getElementById('downloadButton').addEventListener('click', function() {
+    // 从数组中随机选择一个文件
+    const randomFile = files[Math.floor(Math.random() * files.length)];
+
+    // 更新下载链接的 href 属性
+    const downloadLink = document.getElementById('downloadLink');
+    downloadLink.setAttribute('href', `assets/gift/${randomFile}`);
+
+    // 触发下载
+    downloadLink.click();
+});
+
+/*==================== Download Track ====================*/
+
+document.getElementById('downloadButton').addEventListener('click', function() {
+        // 触发下载
+        document.getElementById('downloadLink').click();
+
+        // 向谷歌分析发送事件
+        gtag('event', 'download', {
+            'event_category': 'Download Button Clicks',
+            'event_label': 'Holiday Gift Downloaded'
+        });
+    });
 
 
 /*==================== PICK A KEYWORD BUTTON INTERACTION ====================*/
